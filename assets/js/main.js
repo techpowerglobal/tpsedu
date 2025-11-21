@@ -213,7 +213,7 @@ document.getElementById("projectPopup").addEventListener("click", function(e){
       .catch(err => console.error('Footer failed to load:', err));
 
 
-      emailjs.init(" _VcwjPcFuBrB03JBZ"); // ✅ Your Public Key
+      emailjs.init("_VcwjPcFuBrB03JBZ"); // ✅ Your Public Key
 
     document.getElementById("project-form").addEventListener("submit", function(e) {
     e.preventDefault();
