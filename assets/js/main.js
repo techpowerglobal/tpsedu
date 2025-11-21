@@ -213,12 +213,12 @@ document.getElementById("projectPopup").addEventListener("click", function(e){
       .catch(err => console.error('Footer failed to load:', err));
 
 
-      emailjs.init("9xHpgOY6yH6vDA2dm"); // ✅ Your Public Key
+      emailjs.init(" _VcwjPcFuBrB03JBZ"); // ✅ Your Public Key
 
     document.getElementById("project-form").addEventListener("submit", function(e) {
     e.preventDefault();
 
-    emailjs.sendForm("service_zc5c5qj", "template_okqjcvh", this)
+    emailjs.sendForm("service_cj59ash", "template_490hfmk", this)
     .then(() => {
         alert("✅ Your Booking Request Has Been Sent Successfully!");
         this.reset();
