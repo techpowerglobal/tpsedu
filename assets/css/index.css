@@ -1,0 +1,583 @@
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Background Image */
+.hero-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: blur(4px); /* slight blur */
+}
+
+/* Dark Overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35); /* adjust darkness */
+  backdrop-filter: blur(2px);
+  z-index: 3;
+}
+
+/* Content */
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 5;
+  animation: fadeInUp 1.5s ease both;
+}
+
+.hero-content h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.3;
+}
+
+/* Round Button */
+.hero-btn {
+  margin-top: 20px;
+  width: 200px;
+  height: 60px;
+  border-radius: 50px;
+  border: 2px solid white;
+  background: transparent;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+  transition: 0.4s ease;
+  text-decoration: none; /* 👉 Important */
+}
+
+/* Hover */
+.hero-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 18px rgba(255,255,255,0.7);
+}
+
+
+/* Floating animation */
+@keyframes fadeInUp {
+  0% { opacity: 0; transform: translate(-50%, -60%); }
+  100% { opacity: 1; transform: translate(-50%, -50%); }
+}
+
+/*** MOBILE Responsive ***/
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 1.9rem;
+  }
+
+  .hero-btn {
+    width: 120px;
+    height: 80px;
+    font-size: 20px;
+    border-radius: 20px;
+  }
+}
+
+
+.proud-section {
+  text-align: center;
+  padding: 60px 20px;
+  background: transparent;
+  position: relative;
+  z-index: 2;
+}
+
+.title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  color: black;
+}
+
+/* Stats Container */
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+}
+
+/* Animated Border Box */
+.stat-card {
+  position: relative;
+  padding: 25px 50px;
+  /* border-radius: 50px; */
+  min-width: 250px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s;
+  isolation: isolate; /* FIX: Prevents blur leaking outside */
+}
+
+.stat-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 30px;
+  padding: 2px;
+  background: linear-gradient(135deg,
+    #ff0055,
+    #ff8800,
+    #00ffaa,
+    #0077ff,
+    #ff00dd
+  );
+  background-size: 400% 400%;
+  animation: borderAnim 6s linear infinite;
+  mask: linear-gradient(black 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+}
+
+@keyframes borderAnim {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-card h2 {
+  font-size: 2rem;
+  color:black;
+  margin: 0;
+}
+
+.stat-card p {
+  color: black;
+  margin-top: 8px;
+  font-size: 1rem;
+}
+/* Progress Cards */
+.progress-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.progress-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px 30px;
+  width: 420px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.progress-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.percent {
+  font-size: 2rem;
+  font-weight: 700;
+  color:black;
+}
+
+/* Progress Bar */
+.progress-bar {
+  background: rgba(255, 255, 255, 0.1);
+  height: 18px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  width: var(--fill);
+  background:green;
+  border-radius: 10px;
+  animation: fillAnim 2s ease-in-out forwards;
+  color: white;
+}
+
+@keyframes fillAnim {
+  from { width: 0; }
+  to { width: var(--fill); }
+}
+
+/* Container */
+.course-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  padding: 60px 5%;
+  flex-wrap: wrap;
+}
+
+/* Fixed card width to avoid overlap */
+.course-card {
+  position: relative;
+  width: 350px;        /* Fixed width = no overlap */
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+
+/* Multicolor animated border */
+.course-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 3px;
+  background: linear-gradient(120deg, #ff004c, #ff9d00, #00ffa2, #008cff, #ff00dd);
+  background-size: 400% 400%;
+  animation: borderFlow 6s linear infinite;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+@keyframes borderFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Image styling */
+.course-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;  /* prevents image distortion */
+  border-radius: 20px;
+  transition: transform 0.5s ease;
+}
+
+/* Hover zoom */
+.course-card:hover img {
+  transform: scale(1.1);
+}
+
+/* Overlay container */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Hover: show overlay */
+.course-card:hover .overlay {
+  opacity: 1;
+}
+
+/* Overlay text */
+.overlay h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.overlay p {
+  font-size: 1rem;
+  color: #ddd;
+  max-width: 300px;
+  margin-bottom: 20px;
+}
+
+/* Buy Now Button */
+.buy-btn {
+  background: linear-gradient(90deg, #ff4d00, #ff9d00);
+  color: white;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 10px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.4s ease;
+  opacity: 0;
+}
+.course-btn {
+  background: linear-gradient(90deg, #ff4d00, #ff9d00);
+  color: white;
+  border: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 10px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none;
+}
+/* Show button when hovered */
+.course-card:hover .buy-btn {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+/* Hover glow */
+.course-btn:hover,
+.buy-btn:hover {
+  background: linear-gradient(90deg, #ff8000, #ffd500);
+  box-shadow: 0 0 15px #ffae00;
+}
+
+.projects {
+  padding: 60px 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  background:#0C2B4E;
+}
+
+.titlee {
+  width: 100%;
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+  font-size: 1.7rem;
+  font-weight: 600;
+  font-family: 'Times New Roman', Times, serif;
+  text-transform: capitalize;
+}
+
+.project-card {
+  width: 330px;
+  background: #111;
+  border-radius: 30px;
+  padding: 25px;
+  text-align: center;
+  border: 2px solid #333;
+  transition: 0.4s;
+}
+
+.project-card:hover {
+  background: #ff6a00;
+  border-color: #ff6a00;
+  transform: translateY(-8px);
+}
+
+.project-card h3 {
+  color: white;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.project-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.project-card p {
+  color: white;
+  margin-bottom: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.project-card button {
+  background: white;
+  color: #000;
+  border: none;
+  padding: 12px 32px;
+  font-size: 1rem;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.project-card:hover button {
+  background: #000;
+  color: #fff;
+}
+.success-stories {
+  width: 100%;
+  background: #000;
+  color: #fff;
+  padding: 60px 5%;
+  text-align: center;
+}
+
+/* ============================
+   REMOVE TITLE COMPLETELY
+============================ */
+.section-title {
+  display: none;
+}
+
+/* ============================
+   CAROUSEL BASE STYLE
+============================ */
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.arrow {
+  font-size: 35px;
+  background: transparent;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.carousel-track {
+  display: flex;
+  overflow: hidden;
+  width: 80%;
+}
+
+/* ============================
+   SLIDE STYLING
+============================ */
+.slide {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* center image horizontally */
+  transition: 0.5s ease-in-out;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.slide.active {
+  display: flex;
+  opacity: 1;
+}
+
+.slide img {
+  width: 70%;
+  border-radius: 8px;
+  max-height: 300px;
+  display: block;
+  margin: 0 auto; /* center image */
+}
+
+/* ============================
+   CONTENT (DESKTOP ONLY)
+============================ */
+.content {
+  width: 50%;
+  padding-left: 40px;
+  text-align: left;
+}
+
+.content p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* ============================
+   DOTS
+============================ */
+.dots {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  margin: 4px;
+  background: #666;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.active-dot {
+  background: #fff;
+}
+
+/* ============================
+   MOBILE VIEW (≤ 768px)
+============================ */
+@media (max-width: 768px) {
+
+  /* image center layout */
+  .slide {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
+  /* image bigger on mobile */
+  .slide img {
+    width: 90%;
+    max-height: 240px;
+  }
+
+  /* hide text content */
+  .content {
+    display: none;
+  }
+
+  /* full width track */
+  .carousel-track {
+    width: 100%;
+  }
+
+  /* smaller arrow icons */
+  .arrow {
+    font-size: 28px;
+    padding: 5px;
+  }
+}
+
+/* MOBILE ONLY FIX — Always show overlay */
+@media (max-width: 600px) {
+  .overlay {
+    opacity: 1 !important;      /* always visible */
+  }
+
+  .buy-btn {
+    opacity: 1 !important;      /* button always visible */
+    transform: scale(1) !important;
+  }
+
+  .course-card img {
+    transform: none !important; /* no hover zoom */
+  }
+}
+

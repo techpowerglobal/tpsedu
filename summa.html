@@ -1,0 +1,123 @@
+<!-- header.html -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Header Fix</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  header{background:#fafbfc;position:fixed;width:100%;top:0;z-index:9999;padding:15px 0}
+  .navbar{display:flex;align-items:center;justify-content:space-between;padding:0 20px}
+  .logo img{width:160px;display:block}
+  .menu{list-style:none;display:flex;gap:25px;font-size:16px}
+  .menu li a{color:#0f0f0f;text-decoration:none;font-size:16px;transition:.25s;display:inline-flex;align-items:center;gap:6px}
+  .menu li a:hover{color:#2636cc}
+  .dropdown{position:relative}
+  .caret{display:inline-block;width:0;height:0;border-left:5px solid transparent;border-right:5px solid transparent;border-top:6px solid #1A3D64;margin-left:6px;transform-origin:center;transition:transform .2s}
+  .dropdown.active > a .caret{transform:rotate(180deg)}
+  .dropdown-menu{position:absolute;top:100%;left:0;background:#fff;padding:12px 8px;opacity:0;visibility:hidden;transform:translateY(10px);transition:.22s;box-shadow:0 4px 14px rgba(0,0,0,.12);border-radius:6px;list-style:none;min-width:180px}
+  .dropdown:hover .dropdown-menu{opacity:1;visibility:visible;transform:translateY(0)}
+  .dropdown-menu li a{display:block;padding:10px 14px;color:#1A3D64}
+  .dropdown-menu li a:hover{background:gold;color:#fff;border-radius:4px}
+  .menu-icon{display:none;font-size:26px;cursor:pointer}
+  #menu-toggle{display:none}
+
+  /* Mobile */
+  @media (max-width:768px){
+    .menu{position:fixed;right:-100%;top:60px;width:70%;height:100vh;background:#fff;flex-direction:column;padding:30px 20px;gap:16px;transition:.25s;overflow-y:auto}
+    #menu-toggle:checked ~ .menu{right:0}
+    .menu-icon{display:block;color:#000}
+    /* remove hover behavior on mobile */
+    .dropdown:hover .dropdown-menu{opacity:unset;visibility:unset;transform:unset}
+    .dropdown-menu{display:none;position:static;background:transparent;box-shadow:none;padding-left:12px}
+    .dropdown.active .dropdown-menu{display:block}
+    .dropdown-menu li a{color:#000;padding:8px 0}
+    /* slightly larger hit area for main link */
+    .dropdown > a{padding:8px 6px}
+  }
+  .nav-list {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: white;
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* MOBILE */
+@media(max-width: 768px) {
+  .nav-list {
+    flex-direction: column;
+  }
+
+  .dropdown-menu {
+    position: static;
+    display: none;
+  }
+
+  .dropdown.active .dropdown-menu {
+    display: block;
+  }
+}
+
+
+  /* small visual spacing so header content doesn't hide under fixed header */
+  body{padding-top:72px}
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <ul class="nav-list">
+        <li class="dropdown">
+        <a href="./softwareproject.html" class="main-link">Projects</a>
+        <ul class="dropdown-menu">
+          <li><a href="./webdev.html">Web Development</a></li>
+          <li><a href="./appdev.html">App Development</a></li>
+          <li><a href="./ai.html">AI Projects</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const dropdowns = document.querySelectorAll(".dropdown");
+
+  dropdowns.forEach(drop => {
+    const mainLink = drop.querySelector(".main-link");
+    const submenu = drop.querySelector(".dropdown-menu");
+
+    mainLink.addEventListener("click", function (e) {
+      const isMobile = window.innerWidth <= 768;
+
+      if (isMobile) {
+        // submenu closed → open it
+        if (!drop.classList.contains("active")) {
+          e.preventDefault();
+          drop.classList.add("active");
+          return;
+        }
+        // submenu open → now allow page navigation
+      }
+    });
+  });
+
+});
+</script>
+
+
+</body>
+</html>

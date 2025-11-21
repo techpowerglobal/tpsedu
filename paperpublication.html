@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="icon" type="image/png" href="./assets/images/TPSlogo.png">
+    <title>Pulication | TechPowerSolutions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <style>
+
+
+/* ------------------------------
+   GENERAL STYLES
+--------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  color: #003366;
+  overflow-x: hidden;
+}
+
+/* HERO / FIRST SECTION */
+.heed {
+  position: relative;
+  overflow: hidden;
+  margin-top: 100px;
+}
+
+.first {
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+              url('./assets/images/download.png') center/cover no-repeat;
+  color: #070707;
+  text-align: center;
+  padding: 100px 20px;
+  animation: fadeInSimple 1.5s ease-in-out;
+}
+
+.content-box {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  animation: slideUpSimple 1.8s ease-in-out;
+}
+
+.headline {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.highlight-s,
+.highlight-7,
+.highlight-exclamation {
+  color: #66ccff;
+}
+
+.subtext {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+  color: #ffffff;
+}
+
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.form-container input {
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #66ccff;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #003366;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.form-container input:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(102, 204, 255, 0.5);
+  transform: scale(1.05);
+}
+
+.btn {
+  background-color: #66ccff;
+  color: #003366;
+  border: none;
+  padding: 12px 30px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ffffff;
+  color: #003366;
+  transform: translateY(-3px);
+}
+
+@keyframes fadeInSimple {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUpSimple {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* NEED SECTION */
+.need {
+  background: linear-gradient(to bottom right, #ffffff, #e6f2ff);
+  padding: 80px 20px;
+  text-align: center;
+  color: #003366;
+}
+
+.need-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 60px;
+  line-height: 1.4;
+}
+
+.need-heading em {
+  color: #007bff;
+  font-style: normal;
+}
+
+.need-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  align-items: stretch;
+  margin-bottom: 40px;
+}
+
+.need-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 51, 102, 0.1);
+  padding: 30px 25px;
+  max-width: 350px;
+  transition: all 0.3s ease-in-out;
+}
+
+.need-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.2);
+}
+
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  background: #007bff;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  margin: 0 auto 20px;
+}
+
+.need-card h3 {
+  color: #003366;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.need-card p {
+  color: #004080;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.btn-need {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 14px 35px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-need:hover {
+  background: #0056b3;
+  transform: translateY(-3px);
+}
+
+
+
+
+</style>
+</head>
+<body>
+
+<header class="header">
+  <nav class="navbar">
+    
+    <div class="logo">
+      <a href="index.html">
+        <img src="https://techpowersolutions.in/wp-content/uploads/2021/08/logo_2021-1.png" />
+      </a>
+    </div>
+
+    <button class="menu-btn" id="menu-btn">&#9776;</button>
+
+    <ul class="menu" id="menu">
+
+      <li><a href="index.html">Home</a></li>
+      <li><a href="ourcourse.html">Our Courses</a></li>
+
+      <li class="dropdown">
+        <button class="dropdown-toggle">
+          Projects
+          <span class="bar-icon"></span>
+        </button>
+
+        <ul class="dropdown-menu">
+          <li><a href="./hardware.html">Hardware Projects</a></li>
+          <li><a href="./softwareproject.html">Software Projects</a></li>
+          <li><a href="./phd.html">PhD Projects</a></li>
+          <li><a href="./paperpublication.html">Paper Publication</a></li>
+        </ul>
+      </li>
+
+      <li><a href="internship.html">Internship</a></li>
+      <li><a href="consult.html">Free Consultations</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+
+    </ul>
+
+  </nav>
+</header>
+
+
+<!-- HERO SECTION -->
+<section class="heed" id="home">
+  <section class="first">
+    <div class="content-box">
+      <h1 class="headline">
+       Publish Your Research With Confidence<span class="highlight-s">s</span><br>
+       Accepted by Top Journals – Fast & Hassle-Free<span class="highlight-exclamation">!</span> Focus on Innovation, We Handle the Publishing.
+      </h1>
+     
+      
+      <div class="bottom-section">
+        <a href="./cont.html"><button class="btn">BOOK FREE CONSULTATION CALL</button></a>
+      </div>
+    </div>
+  </section>
+</section>
+<section class="need" id="about">
+  <div class="need-container">
+    <h1 class="need-heading">
+      Journal
+    </h1>
+
+    <div class="need-grid">
+      <div class="need-card">
+        <div class="icon-circle"><img src="./assets/images/image.png" alt=""></div>
+        <h3>SCI Journal</h3>
+        <p>Access the latest impact factors of more than 28,000 science journals since 2012. Learn the latest science research tools to maximize your impact today.</p>
+      </div>
+
+      <div class="need-card">
+        <div class="icon-circle"> <img style="height: 60px; width: 60px;" src="./assets/images/ijems-logo.jpg" alt=""> </div>
+        <h3>IJAEMS — International Journal of Advanced Engineering and Management System</h3>
+        <p>IJAEMS is an open-access, peer-reviewed journal that publishes high-quality research in engineering, management, and multidisciplinary fields.
+</p>
+      </div>
+
+      <div class="need-card">
+        <div class="icon-circle"><i class="fa-solid fa-clock"></i></div>
+        <h3>Worried About Deadlines?</h3>
+        <p>We deliver projects on time with continuous progress updates and milestone tracking.</p>
+      </div>
+</section>
+<!-- IJAMS Paper Publishing Section -->
+<section class="ijams-section">
+  <div class="container">
+    <h2>About Our Paper Publishing Service</h2>
+    
+    <p>We provide a dedicated platform for authors to publish high-quality research papers with fast review and professional indexing support. Our publishing service is designed to maintain transparency, credibility, and global academic reach.</p>
+
+    
+
+    <div class="features">
+      <div class="card">
+        <h3>Fast Review Process</h3>
+        <p>We ensure a quick and efficient peer‑review workflow for all submissions.</p>
+      </div>
+
+      <div class="card">
+        <h3>SCI‑Style Listing</h3>
+        <p>Your research will be showcased in a structured, professional format similar to SCI journal presentation.</p>
+      </div>
+
+      <div class="card">
+        <h3>Dedicated Support</h3>
+        <p>Authors receive full assistance from submission to publication.</p>
+      </div>
+      </div>
+      <br>
+      <br>
+<h1 class="ijams-title">IJAEMS — International Journal of Advanced Engineering and Management System</h1>
+    <section class="ijams-official-cta">
+  <div class="cta-container">
+    <p class="ijams-about">IJAEMS (International Journal of Advanced Engineering and Management System) is a peer‑reviewed open‑access journal dedicated to publishing high‑quality research across various academic disciplines. Our mission is to provide a trusted platform for researchers, scholars, and innovators to share impactful findings with a global audience.</p>
+
+    <a href="https://ijaems.in/" class="visit-btn cta-btn" target="_blank" rel="noopener">Visit Official IJAEMS Website</a>
+
+  </div>
+</section>
+  </div>
+</section>
+
+<style>
+  .ijams-section {
+    padding: 60px 20px;
+    background: #f5f8ff;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .ijams-section .container {
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+  }
+
+  .ijams-section h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #003d80;
+    margin-bottom: 15px;
+  }
+
+  .ijams-section p {
+    font-size: 16px;
+    color: #333;
+  }
+
+  .features {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+  }
+
+  .card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  }
+
+  .card h3 {
+    color: #004a99;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  @media (max-width: 600px) {
+    .ijams-section h2 { font-size: 26px; }
+    .card { padding: 20px; }
+  }
+.ijams-about {
+    margin-top: 20px;
+    font-size: 17px;
+    color: #222;
+    line-height: 1.7;
+  }
+
+  .visit-btn {
+    display: inline-block;
+    margin-top: 25px;
+    background: #004a99;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+  }
+
+  .visit-btn:hover {
+    background: #003066;
+    color: white;
+  }
+
+.ijams-about {
+    margin-top: 20px;
+    font-size: 17px;
+    color: #222;
+    line-height: 1.7;
+  }
+
+  .visit-btn {
+    display: inline-block;
+    margin-top: 25px;
+    background: #004a99;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+  }
+
+  .visit-btn:hover {
+    background: #003066;
+   color: white;
+  }
+
+  /* New CTA section styles & animations */
+  .ijams-official-cta {
+    padding: 40px 20px;
+    margin-top: 30px;
+    background: linear-gradient(90deg, rgba(0,74,153,0.06), rgba(0,74,153,0.02));
+    border-radius: 14px;
+  }
+
+  .ijams-official-cta .cta-container {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px 20px;
+  }
+
+  /* animated button (entry + gentle pulse) */
+  .cta-btn {
+    animation: slideInUp 700ms ease-out, pulse 2500ms 900ms infinite;
+    box-shadow: 0 8px 18px rgba(0, 74, 153, 0.12);
+  }
+
+  @keyframes slideInUp {
+    0% { transform: translateY(20px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+
+  @keyframes pulse {
+    0% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-2px) scale(1.02); }
+    100% { transform: translateY(0) scale(1); }
+  }
+
+  @media (max-width: 600px) {
+    .ijams-section h2 { font-size: 26px; }
+    .card { padding: 20px; }
+    .visit-btn { padding: 10px 18px; }
+  }
+
+.ijams-title {
+    font-size: 36px;
+    margin: 0 0 10px 0;
+    font-weight: 800;
+    letter-spacing: 1px;
+    background: linear-gradient(90deg, #003d80, #0066cc, #00aaff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: titleSlideIn 900ms ease-out, titleShimmer 2500ms 1200ms infinite;
+  }
+
+  @keyframes titleSlideIn {
+    0% { transform: translateY(-15px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+  }
+
+  /* subtle moving gradient shimmer */
+  @keyframes titleShimmer {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  /* small decorative underline */
+  .ijams-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    margin: 10px auto 0 auto;
+    border-radius: 4px;
+    background: linear-gradient(90deg, rgba(0,74,153,0.9), rgba(0,170,255,0.9));
+    transform-origin: center;
+    animation: underlineGrow 700ms ease-out;
+  }
+
+  @keyframes underlineGrow {
+    0% { transform: scaleX(0); opacity: 0; }
+    100% { transform: scaleX(1); opacity: 1; }
+  }
+
+</style>
+
+
+
+
+
+
+
+<a href="tel:+918489317579"
+   style="
+      position: fixed;
+      bottom: 90px; /* moved up */
+      right: 20px;
+      background-color: #0d6efd;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      z-index: 999;">
+   <img src="https://cdn-icons-png.flaticon.com/512/159/159832.png" 
+        style="width: 28px; height: 28px;">
+</a>
+
+<!-- WhatsApp Button (Bottom) -->
+<a href="https://wa.me/+8489317579" target="_blank"
+   style="
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      z-index: 999;">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+        style="width: 30px; height: 30px;">
+</a>
+
+
+  <div id="footer"></div>
+
+<script>
+// ========================================
+// MOBILE MENU TOGGLE FUNCTION
+// ========================================
+const menuToggle = document.getElementById('menuToggle');
+const nav = document.getElementById('nav');
+
+if (menuToggle && nav) {
+  menuToggle.addEventListener('click', function() {
+    nav.classList.toggle('active');
+    
+    // Toggle icon between bars and times
+    const icon = this.querySelector('i');
+    if (nav.classList.contains('active')) {
+      icon.classList.remove('fa-bars');
+      icon.classList.add('fa-times');
+    } else {
+      icon.classList.remove('fa-times');
+      icon.classList.add('fa-bars');
+    }
+  });
+
+  // Close menu when clicking on a link
+  const navLinks = nav.querySelectorAll('a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      nav.classList.remove('active');
+      const icon = menuToggle.querySelector('i');
+      icon.classList.remove('fa-times');
+      icon.classList.add('fa-bars');
+    });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', function(event) {
+    const isClickInsideNav = nav.contains(event.target);
+    const isClickOnToggle = menuToggle.contains(event.target);
+    
+    if (!isClickInsideNav && !isClickOnToggle && nav.classList.contains('active')) {
+      nav.classList.remove('active');
+      const icon = menuToggle.querySelector('i');
+      icon.classList.remove('fa-times');
+      icon.classList.add('fa-bars');
+
+      
+    }
+  });
+}
+
+// ========================================
+// CAROUSEL FUNCTIONALITY
+// ========================================
+let currentSlide = 0;
+const carouselTrack = document.querySelector('.carousel-track');
+const carouselItems = document.querySelectorAll('.carousel-item');
+const prevBtn = document.querySelector('.carousel-btn.prev');
+const nextBtn = document.querySelector('.carousel-btn.next');
+
+function updateCarousel() {
+  const offset = -currentSlide * 100;
+  carouselTrack.style.transform = `translateX(${offset}%)`;
+}
+
+if (prevBtn && nextBtn) {
+  prevBtn.addEventListener('click', () => {
+    currentSlide = (currentSlide - 1 + carouselItems.length) % carouselItems.length;
+    updateCarousel();
+  });
+
+  nextBtn.addEventListener('click', () => {
+    currentSlide = (currentSlide + 1) % carouselItems.length;
+    updateCarousel();
+  });
+
+  // Auto-play carousel
+  setInterval(() => {
+    currentSlide = (currentSlide + 1) % carouselItems.length;
+    updateCarousel();
+  }, 5000);
+}
+
+// ========================================
+// FAQ ACCORDION FUNCTIONALITY
+// ========================================
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+  item.addEventListener('click', function() {
+    // Close other open items
+    faqItems.forEach(otherItem => {
+      if (otherItem !== item) {
+        otherItem.classList.remove('active');
+      }
+    });
+    
+    // Toggle current item
+    this.classList.toggle('active');
+  });
+});
+document.addEventListener('DOMContentLoaded', () => {
+  fetch('./header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header').innerHTML = data;
+    })
+    .catch(err => console.error('Header not loaded:', err));
+});
+
+// ========================================
+// SMOOTH SCROLL FOR ANCHOR LINKS
+// ========================================
+document.addEventListener('DOMContentLoaded', function() {
+  const links = document.querySelectorAll('a[href^="#"]');
+  
+  links.forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href !== '#' && href !== '') {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }
+    });
+  });
+});
+</script>
+ <script src="./assets/css/mainn.js"></script>
+ <script src="./assets/js/header.js"></script>
+
+</body>
+</html>

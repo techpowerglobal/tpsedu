@@ -1,0 +1,141 @@
+footer {
+  background-color:#0C2B4E;
+  color: #fff;
+  padding: 50px 80px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+/* About Section */
+.footer-about {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-about img {
+  width: 160px;
+  margin-bottom: 15px;
+}
+
+/* ✅ FIXED Alignment — No Justify */
+.footer-about p {
+  text-align: left;
+  max-width: 430px;
+  line-height: 1.6;
+  color: #d6dbe0;
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 15px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 12px;
+  width: 40px;
+  height: 40px;
+  background: #001f3f;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  background: #FFD700;
+  color: #001f3f;
+}
+
+/* Quick Links */
+.footer-links {
+  flex: 1;
+  min-width: 190px;
+}
+
+.footer-links h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  text-decoration: none;
+  color: #d6dbe0;
+  transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+  color: #FFD700;
+}
+
+/* Contact */
+.footer-contact {
+  flex: 1.2;
+  min-width: 250px;
+}
+
+.footer-contact h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+}
+
+.footer-contact p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+  color: #d6dbe0;
+}
+
+.footer-contact p i {
+  color: #FFD700;
+  margin-right: 8px;
+}
+
+/* Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  border-top: 1px solid #1c3d5a;
+  padding-top: 15px;
+  font-size: 14px;
+  color: #bbb;
+}
+
+/* ✅ Mobile View Perfectly Centered */
+@media (max-width: 768px) {
+  footer {
+    padding: 40px 20px 20px;
+    text-align: center;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-about p {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .footer-contact p {
+    text-align: center;
+  }
+}

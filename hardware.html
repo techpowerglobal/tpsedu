@@ -1,0 +1,1238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hardware | TechPowerSolutions</title>
+      <link rel="icon" type="image/png" href="./assets/images/TPSlogo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="stylesheet" href="./assets/css/header.css">
+    
+    <style>
+
+
+/* ------------------------------
+   GENERAL STYLES
+--------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  color: #003366;
+  overflow-x: hidden;
+}
+
+/* HERO / FIRST SECTION */
+.heed {
+  position: relative;
+  overflow: hidden;
+  margin-top: 100px;
+}
+
+.first {
+  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+              url('https://images.pexels.com/photos/6177654/pexels-photo-6177654.jpeg') center/cover no-repeat;
+  color: #070707;
+  text-align: center;
+  padding: 100px 20px;
+  animation: fadeInSimple 1.5s ease-in-out;
+}
+
+.content-box {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  animation: slideUpSimple 1.8s ease-in-out;
+}
+
+.headline {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.highlight-s,
+.highlight-7,
+.highlight-exclamation {
+  color: #66ccff;
+}
+
+.subtext {
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+  opacity: 0.9;
+  color: #ffffff;
+}
+
+.form-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.form-container input {
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #66ccff;
+  border-radius: 5px;
+  background-color: #ffffff;
+  color: #003366;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.form-container input:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(102, 204, 255, 0.5);
+  transform: scale(1.05);
+}
+
+.btn {
+  background-color: #66ccff;
+  color: #003366;
+  border: none;
+  padding: 12px 30px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #ffffff;
+  color: #003366;
+  transform: translateY(-3px);
+}
+
+@keyframes fadeInSimple {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUpSimple {
+  from { opacity: 0; transform: translateY(50px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* WHY CHOOSE US */
+.choose {
+  background: #f8fbff;
+  width: 100%;
+  padding: 100px 20px;
+}
+
+.choose h2 {
+  color: #0056b3;
+  font-size: 2rem;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.list {
+  list-style: none;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.list li {
+  background: #e8f3ff;
+  margin: 10px 0;
+  padding: 14px;
+  border-left: 4px solid #007bff;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.list li:hover {
+  transform: translateX(10px);
+  background: #d6ecff;
+}
+
+/* NEED SECTION */
+.need {
+  background: linear-gradient(to bottom right, #ffffff, #e6f2ff);
+  padding: 80px 20px;
+  text-align: center;
+  color: #003366;
+}
+
+.need-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #003366;
+  margin-bottom: 60px;
+  line-height: 1.4;
+}
+
+.need-heading em {
+  color: #007bff;
+  font-style: normal;
+}
+
+.need-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  justify-items: center;
+  align-items: stretch;
+  margin-bottom: 40px;
+}
+
+.need-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 51, 102, 0.1);
+  padding: 30px 25px;
+  max-width: 350px;
+  transition: all 0.3s ease-in-out;
+}
+
+.need-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.2);
+}
+
+.icon-circle {
+  width: 60px;
+  height: 60px;
+  background: #007bff;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  margin: 0 auto 20px;
+}
+
+.need-card h3 {
+  color: #003366;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.need-card p {
+  color: #004080;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.btn-need {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 14px 35px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-need:hover {
+  background: #0056b3;
+  transform: translateY(-3px);
+}
+
+/* ROADMAP SECTION */
+.roadmap {
+  background: linear-gradient(to bottom right, #ffffff, #e6f3ff);
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.roadmap-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.roadmap h1 {
+  font-size: 2rem;
+  color: #003366;
+  font-weight: 700;
+  margin-bottom: 70px;
+}
+
+.roadmap .highlight {
+  color: #007bff;
+}
+
+.timeline {
+  position: relative;
+  padding: 0;
+  margin: 0 auto;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: #007bff;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+}
+
+.timeline-item {
+  padding: 20px 0;
+  position: relative;
+  width: 50%;
+}
+
+.timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+
+.timeline-item.right {
+  left: 50%;
+}
+
+.timeline-content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.timeline-item.left .timeline-content {
+  flex-direction: row-reverse;
+}
+
+.timeline-img img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #007bff;
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+  transition: transform 0.3s;
+}
+
+.timeline-img img:hover {
+  transform: scale(1.05);
+}
+
+.timeline-text {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 51, 102, 0.1);
+  padding: 25px;
+  max-width: 400px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.timeline-text:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.2);
+}
+
+.timeline-text h2 {
+  color: #003366;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.timeline-text p {
+  color: #004080;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* DELIVERABLES SECTION */
+.deliverables-section {
+  width: 100%;
+  background: linear-gradient(135deg, #0d3b66 0%, #1a5276 100%);
+  color: #111111;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.deliverables-section h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: white;
+}
+
+.deliverables-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  color: white;
+}
+
+.deliverable-item {
+  width: 100%;
+  max-width: 900px;
+  background-color: rgba(255,255,255,0.1);
+  padding: 20px 30px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 10px;
+  text-align: left;
+  color: white;
+  border-left: 4px solid #66ccff;
+  transition: all 0.3s ease;
+}
+
+.deliverable-item:hover {
+  background-color: rgba(255,255,255,0.2);
+  transform: translateX(10px);
+}
+
+.consult-btn {
+  background-color: #ffce00;
+  color: #0d3b66;
+  border: none;
+  border-radius: 8px;
+  padding: 15px 35px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 50px;
+  transition: all 0.3s ease;
+}
+
+.consult-btn:hover {
+  background-color: #e6b800;
+  transform: translateY(-2px);
+}
+
+/* BONUSES SECTION */
+.bonuses-section {
+  background: #f0f8ff;
+  padding: 80px 20px;
+}
+
+.bonuses-section h2 {
+  color: #0056b3;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+}
+
+.bonuses-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+.bonus-card {
+  background: #ffffff;
+  border: 1px solid #cce5ff;
+  border-radius: 10px;
+  width: 260px;
+  padding: 25px;
+  transition: 0.3s;
+  box-shadow: 0 0 10px rgba(0,123,255,0.1);
+  font-size: 1rem;
+}
+
+.bonus-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 0 20px rgba(0,123,255,0.3);
+}
+
+.btn-bonus {
+  background: linear-gradient(90deg, #007bff, #00bfff);
+  padding: 14px 30px;
+  border-radius: 25px;
+  font-weight: bold;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  display: block;
+  margin: 0 auto;
+}
+
+.btn-bonus:hover {
+  transform: scale(1.05);
+}
+
+/* FEEDBACK SECTION */
+.feedback-section {
+  max-width: 800px;
+  margin: 80px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.feedback-section h2 {
+  margin-bottom: 30px;
+  color: #0d3b66;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.7s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+  padding: 30px 40px;
+  box-sizing: border-box;
+  background: #f5faff;
+  color: #004080;
+  font-size: 1.1rem;
+}
+
+.carousel-item h4 {
+  margin-top: 15px;
+  font-weight: 600;
+  color: #0066cc;
+  font-style: italic;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #0d3b66cc;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  z-index: 10;
+}
+
+.carousel-btn:hover {
+  background-color: #faa916cc;
+}
+
+.carousel-btn.prev {
+  left: 10px;
+}
+
+.carousel-btn.next {
+  right: 10px;
+}
+
+/* COMPARISON SECTION */
+.compare {
+  background: linear-gradient(180deg, #ffffff 0%, #e6f7ff 100%);
+  color: #003366;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.compare h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.underline {
+  color: #0099ff;
+  text-decoration: underline;
+}
+
+.table-container {
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+}
+
+table {
+  width: 90%;
+  max-width: 900px;
+  border-collapse: collapse;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 51, 102, 0.15);
+}
+
+th {
+  background-color: #003366;
+  color: #ffffff;
+  padding: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+td {
+  border-bottom: 1px solid #66ccff;
+  padding: 15px;
+  color: #003366;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+tr:hover td {
+  background: #e6f7ff;
+}
+
+.cta-btn {
+  margin-top: 50px;
+  background-color: #0099ff;
+  color: #ffffff;
+  border: none;
+  padding: 14px 40px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.cta-btn:hover {
+  background-color: #ffffff;
+  color: #003366;
+  box-shadow: 0 0 15px rgba(102, 204, 255, 0.8);
+}
+
+/* FAQ SECTION */
+.faq-section {
+  width: 100%;
+  background-color: #f2f5f7;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.faq-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  color: #0d3b66;
+}
+
+.faq-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  background-color: #fff;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  padding: 20px 25px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.faq-question {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #0d3b66;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+}
+
+.faq-answer {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 10px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  opacity: 0;
+  text-align: left;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px;
+  opacity: 1;
+}
+
+.faq-question::after {
+  content: '+';
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question::after {
+  content: '−';
+  transform: rotate(180deg);
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  .headline {
+    font-size: 2rem;
+  }
+
+  .form-container input {
+    width: 90%;
+  }
+
+  .btn {
+    width: 90%;
+  }
+
+  .choose {
+    padding: 60px 20px;
+  }
+
+  .timeline::after {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 40px;
+    margin-bottom: 50px;
+  }
+
+  .timeline-item.left, .timeline-item.right {
+    left: 0;
+    text-align: left;
+  }
+
+  .timeline-content {
+    flex-direction: row;
+  }
+
+  .timeline-img img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .timeline-text {
+    max-width: 100%;
+  }
+
+  table {
+    width: 99%;
+    font-size: 0.5rem;
+  }
+
+  th, td {
+    padding: 10px;
+  }
+
+  .cta-btn, .consult-btn {
+    width: 90%;
+    font-size: 1rem;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+    </style>
+</head>
+<body>
+ <header class="header">
+  <nav class="navbar">
+    
+    <div class="logo">
+      <a href="index.html">
+        <img src="https://techpowersolutions.in/wp-content/uploads/2021/08/logo_2021-1.png" />
+      </a>
+    </div>
+
+    <button class="menu-btn" id="menu-btn">&#9776;</button>
+
+    <ul class="menu" id="menu">
+
+      <li><a href="index.html">Home</a></li>
+      <li><a href="ourcourse.html">Our Courses</a></li>
+
+      <li class="dropdown">
+        <button class="dropdown-toggle">
+          Projects
+          <span class="bar-icon"></span>
+        </button>
+
+        <ul class="dropdown-menu">
+          <li><a href="./hardware.html">Hardware Projects</a></li>
+          <li><a href="./softwareproject.html">Software Projects</a></li>
+          <li><a href="./phd.html">PhD Projects</a></li>
+          <li><a href="./paperpublication.html">Paper Publication</a></li>
+        </ul>
+      </li>
+
+      <li><a href="internship.html">Internship</a></li>
+      <li><a href="consult.html">Free Consultations</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+
+    </ul>
+
+  </nav>
+</header>
+
+<!-- HERO SECTION -->
+<section class="heed" id="home">
+  <section class="first">
+    <div class="content-box">
+      <h1 class="headline">
+        Expert Hardware Solution<span class="highlight-s">s</span><br>
+        Delivered to Your Door in <span class="highlight-7">7</span> Days – Guaranteed<span class="highlight-exclamation">!</span>
+      </h1>
+      <p class="subtext">Leave the project to us and get your dream job</p>
+      <!-- <form class="form-container">
+        <input type="text" placeholder="Enter Name" required>
+        <input type="text" placeholder="Enter Contact Number" required>
+        <input type="text" placeholder="College Name" required>
+        <input type="text" placeholder="Enter Skill" required>
+        <input type="text" placeholder="Enter Email" required>
+        <input type="text" placeholder="Enter City" required>
+      </form> -->
+      <div class="bottom-section">
+        <a href="./contact.html"><button class="btn">BOOK FREE CONSULTATION CALL</button></a>
+      </div>
+    </div>
+  </section>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="choose" id="services">
+  <div class="container">
+    <h2>Why Choose Us?</h2>
+    <ul class="list">
+      <li>On-Time Delivery Guaranteed</li>
+      <li>Expert Developers & Researchers</li>
+      <li>5+ Years of Expertise</li>
+      <li>0% AI and Plagiarism – Verified with Turnitin Reports</li>
+      <li>Proven Success with <strong>Over 500</strong> Published Papers and Projects</li>
+    </ul>
+  </div>
+</section>
+
+<!-- NEED SUPPORT -->
+<section class="need" id="about">
+  <div class="need-container">
+    <h1 class="need-heading">
+      Need Support for Your Hardware <em>Design &amp; Development?</em><br>
+      <span>Consider It's Done.</span>
+    </h1>
+
+    <div class="need-grid">
+      <div class="need-card">
+        <div class="icon-circle"><i class="fa-solid fa-microchip"></i></div>
+        <h3>Struggling with Complex Designs?</h3>
+        <p>We make it easy by handling everything, from schematics to working prototypes — fast and reliable.</p>
+      </div>
+
+      <div class="need-card">
+        <div class="icon-circle"><i class="fa-solid fa-robot"></i></div>
+        <h3>Need Innovative Hardware Solutions?</h3>
+        <p>We design advanced systems for IoT, robotics, and automation with cutting-edge technology.</p>
+      </div>
+
+      <div class="need-card">
+        <div class="icon-circle"><i class="fa-solid fa-clock"></i></div>
+        <h3>Worried About Deadlines?</h3>
+        <p>We deliver projects on time with continuous progress updates and milestone tracking.</p>
+      </div>
+
+      <div class="need-card">
+        <div class="icon-circle"><i class="fa-solid fa-check-circle"></i></div>
+        <h3>Concerned About Quality Assurance?</h3>
+        <p>We ensure 100% quality backed by detailed testing reports and validation checks.</p>
+      </div>
+
+      
+
+</section>
+
+<!-- ROADMAP -->
+<section class="roadmap" id="roadmap">
+  <div class="roadmap-container">
+    <h1>Complete A–Z <span class="highlight">Roadmap</span> for Your Research Paper or Thesis</h1>
+
+    <div class="timeline">
+      <!-- Step 1 -->
+      <div class="timeline-item left">
+        <div class="timeline-content">
+          <div class="timeline-img">
+            <img src="https://images.pexels.com/photos/3184357/pexels-photo-3184357.jpeg" alt="Step 1">
+          </div>
+          <div class="timeline-text">
+            <h2>Step 1: Topic Selection & Proposal</h2>
+            <p>We help you choose a novel, research-worthy topic and craft a winning proposal that grabs attention.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="timeline-item right">
+        <div class="timeline-content">
+          <div class="timeline-img">
+            <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg" alt="Step 2">
+          </div>
+          <div class="timeline-text">
+            <h2>Step 2: Research & Development</h2>
+            <p>Detailed literature review, methodology setup, and hands-on model or code implementation with expert guidance.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="timeline-item left">
+        <div class="timeline-content">
+          <div class="timeline-img">
+            <img src="https://images.pexels.com/photos/3861958/pexels-photo-3861958.jpeg" alt="Step 3">
+          </div>
+          <div class="timeline-text">
+            <h2>Step 3: Testing & Validation</h2>
+            <p>We ensure your research outcomes are validated with high accuracy and reliable testing procedures.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 4 -->
+      <div class="timeline-item right">
+        <div class="timeline-content">
+          <div class="timeline-img">
+            <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg" alt="Step 4">
+          </div>
+          <div class="timeline-text">
+            <h2>Step 4: Paper Writing & Publication</h2>
+            <p>Our experts assist in writing and formatting papers as per IEEE/Scopus guidelines and submitting to top journals.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="timeline-item left">
+        <div class="timeline-content">
+          <div class="timeline-img">
+            <img src="https://images.pexels.com/photos/4145197/pexels-photo-4145197.jpeg" alt="Step 5">
+          </div>
+          <div class="timeline-text">
+            <h2>Step 5: Final Thesis & Defense</h2>
+            <p>We help you prepare your final thesis, PPT, and viva presentation to impress your professors and reviewers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DELIVERABLES -->
+<section class="deliverables-section">
+  <h1>Our Deliverables</h1>
+  <div class="deliverables-container">
+    <div class="deliverable-item">Complete Research Paper/Thesis</div>
+    <div class="deliverable-item">Turnitin Reports for AI and Plagiarism</div>
+    <div class="deliverable-item">Advanced Data Analysis Reports for AI/ML Models</div>
+    <div class="deliverable-item">Customized Formatting as per guidelines</div>
+    <div class="deliverable-item">Unlimited Revisions until satisfaction</div>
+    <div class="deliverable-item">Regular Progress Reports</div>
+    <div class="deliverable-item">24/7 Research Support</div>
+  </div>
+  <button class="consult-btn">GET YOUR FREE CONSULTATION CALL NOW</button>
+</section>
+
+<!-- BONUSES -->
+<section class="bonuses-section">
+  <h2>Exciting <span>Bonuses</span></h2>
+  <div class="bonuses-container">
+    <div class="bonus-card">📄 AI/ML Research Titles worth Rs.3999</div>
+    <div class="bonus-card">🔗 Access to Exclusive AI Tools worth Rs.1999</div>
+    <div class="bonus-card">💬 Unlimited Turnitin Reports worth Rs.1999</div>
+    <div class="bonus-card">⚙️ Research Paper A-Z Guidelines worth Rs.2999</div>
+  </div>
+  <button class="btn-bonus">Unlock These Bonuses For Free Now</button>
+</section>
+
+<!-- FEEDBACK SECTION -->
+<section class="feedback-section">
+  <h2>Students Feedback</h2>
+  <div class="carousel-container">
+    <div class="carousel-track">
+      <div class="carousel-item">
+        <p>"Great support! Helped me finish my thesis stress-free."</p>
+        <h4>- Student A</h4>
+      </div>
+      <div class="carousel-item">
+        <p>"Excellent research guidance and timely reports."</p>
+        <h4>- Student B</h4>
+      </div>
+      <div class="carousel-item">
+        <p>"The 24/7 support was a lifesaver for my deadlines."</p>
+        <h4>- Student C</h4>
+      </div>
+    </div>
+    <button class="carousel-btn prev">&#10094;</button>
+    <button class="carousel-btn next">&#10095;</button>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section class="compare">
+  <h2>What makes us <span class="underline">stand out?</span></h2>
+  <div class="table-container">
+    <table>
+      <thead>
+        <tr>
+          <th>Features</th>
+          <th>Other Project Centers</th>
+          <th>Techpowersolutions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Formatting according to Journal guidelines</td><td>✗</td><td>✔</td></tr>
+        <tr><td>Experience</td><td>1-2 years</td><td>5+ years</td></tr>
+        <tr><td>Team</td><td>Inexperienced</td><td>Professional researchers</td></tr>
+        <tr><td>Plagiarism</td><td>No Report</td><td>Turnitin Verified</td></tr>
+        <tr><td>Progress reports</td><td>Final only</td><td>Weekly updates</td></tr>
+        <tr><td>Referral Program</td><td>✗</td><td>Earn 10%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <button class="cta-btn">Get Your Project with techpower Now</button>
+</section>
+
+<!-- FAQ SECTION -->
+<section class="faq-section" id="faq">
+  <h2>FAQs</h2>
+  <h3 style="margin-bottom: 40px; color: #004080;">Here's everything you may ask...</h3>
+
+  <div class="faq-container">
+    <div class="faq-item">
+      <div class="faq-question">
+        In which language is the course being taught?
+      </div>
+      <div class="faq-answer">
+        The course is taught in English to ensure accessibility to a wide range of students.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        What is the programming language used?
+      </div>
+      <div class="faq-answer">
+        We primarily use Python for programming examples and exercises.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        Will the basics of the programming language be taught in the course?
+      </div>
+      <div class="faq-answer">
+        Yes, the course covers the fundamentals for beginners before advancing to more complex topics.
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">
+        Do I get a certificate after completion?
+      </div>
+      <div class="faq-answer">
+        Absolutely! You'll receive a verified certificate upon completing all modules successfully.
+      </div>
+    </div>
+  </div>
+</section>
+<a href="tel:+918489317579"
+   style="
+      position: fixed;
+      bottom: 90px; /* moved up */
+      right: 20px;
+      background-color: #0d6efd;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      z-index: 999;">
+   <img src="https://cdn-icons-png.flaticon.com/512/159/159832.png" 
+        style="width: 28px; height: 28px;">
+</a>
+
+<!-- WhatsApp Button (Bottom) -->
+<a href="https://wa.me/+8489317579" target="_blank"
+   style="
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      z-index: 999;">
+   <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+        style="width: 30px; height: 30px;">
+</a>
+
+
+  <div id="footer"></div>
+
+<script>
+// ========================================
+// MOBILE MENU TOGGLE FUNCTION
+// ========================================
+const menuToggle = document.getElementById('menuToggle');
+const nav = document.getElementById('nav');
+
+if (menuToggle && nav) {
+  menuToggle.addEventListener('click', function() {
+    nav.classList.toggle('active');
+    
+    // Toggle icon between bars and times
+    const icon = this.querySelector('i');
+    if (nav.classList.contains('active')) {
+      icon.classList.remove('fa-bars');
+      icon.classList.add('fa-times');
+    } else {
+      icon.classList.remove('fa-times');
+      icon.classList.add('fa-bars');
+    }
+  });
+
+  // Close menu when clicking on a link
+  const navLinks = nav.querySelectorAll('a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+      nav.classList.remove('active');
+      const icon = menuToggle.querySelector('i');
+      icon.classList.remove('fa-times');
+      icon.classList.add('fa-bars');
+    });
+  });
+
+  // Close menu when clicking outside
+  document.addEventListener('click', function(event) {
+    const isClickInsideNav = nav.contains(event.target);
+    const isClickOnToggle = menuToggle.contains(event.target);
+    
+    if (!isClickInsideNav && !isClickOnToggle && nav.classList.contains('active')) {
+      nav.classList.remove('active');
+      const icon = menuToggle.querySelector('i');
+      icon.classList.remove('fa-times');
+      icon.classList.add('fa-bars');
+
+      
+    }
+  });
+}
+
+// ========================================
+// CAROUSEL FUNCTIONALITY
+// ========================================
+let currentSlide = 0;
+const carouselTrack = document.querySelector('.carousel-track');
+const carouselItems = document.querySelectorAll('.carousel-item');
+const prevBtn = document.querySelector('.carousel-btn.prev');
+const nextBtn = document.querySelector('.carousel-btn.next');
+
+function updateCarousel() {
+  const offset = -currentSlide * 100;
+  carouselTrack.style.transform = `translateX(${offset}%)`;
+}
+
+if (prevBtn && nextBtn) {
+  prevBtn.addEventListener('click', () => {
+    currentSlide = (currentSlide - 1 + carouselItems.length) % carouselItems.length;
+    updateCarousel();
+  });
+
+  nextBtn.addEventListener('click', () => {
+    currentSlide = (currentSlide + 1) % carouselItems.length;
+    updateCarousel();
+  });
+
+  // Auto-play carousel
+  setInterval(() => {
+    currentSlide = (currentSlide + 1) % carouselItems.length;
+    updateCarousel();
+  }, 5000);
+}
+
+// ========================================
+// FAQ ACCORDION FUNCTIONALITY
+// ========================================
+const faqItems = document.querySelectorAll('.faq-item');
+
+faqItems.forEach(item => {
+  item.addEventListener('click', function() {
+    // Close other open items
+    faqItems.forEach(otherItem => {
+      if (otherItem !== item) {
+        otherItem.classList.remove('active');
+      }
+    });
+    
+    // Toggle current item
+    this.classList.toggle('active');
+  });
+});
+document.addEventListener('DOMContentLoaded', () => {
+  fetch('./header.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('header').innerHTML = data;
+    })
+    .catch(err => console.error('Header not loaded:', err));
+});
+
+// ========================================
+// SMOOTH SCROLL FOR ANCHOR LINKS
+// ========================================
+document.addEventListener('DOMContentLoaded', function() {
+  const links = document.querySelectorAll('a[href^="#"]');
+  
+  links.forEach(link => {
+    link.addEventListener('click', function(e) {
+      const href = this.getAttribute('href');
+      if (href !== '#' && href !== '') {
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      }
+    });
+  });
+});
+</script>
+ <script src="./assets/css/mainn.js"></script>
+ <script src="./assets/js/header.js"></script>
+
+</body>
+</html>

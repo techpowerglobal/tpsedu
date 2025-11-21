@@ -1,0 +1,157 @@
+.solutions-section {
+  padding: 60px 5%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  border-top: 1px solid transparent;
+  background: url("https://images.pexels.com/photos/5554667/pexels-photo-5554667.jpeg") no-repeat center center/cover;
+  position: relative;
+}
+
+/* Blur Layer */
+.solutions-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: blur(6px);
+  background: rgba(0,0,0,0.25);
+  z-index: 0;
+}
+
+/* Keep cards above blur */
+.solution-title,
+.solution-card {
+  position: relative;
+  z-index: 5;
+}
+
+.solution-title {
+  width: 100%;
+  margin-top: 150px;
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+  font-size: 4rem;
+  font-weight: 700;
+  font-family: 'Times New Roman', Times, serif;
+  text-transform: capitalize;
+}
+
+.solution-card {
+  width: 330px;
+  background: #111;
+  border-radius: 30px;
+  padding: 25px;
+  text-align: center;
+  border: 2px solid #333;
+  transition: 0.4s;
+}
+
+.solution-card h3 {
+  color: white;
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.solution-card img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.solution-card p {
+  color: white;
+  margin-bottom: 25px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* ✅ BUTTON ALWAYS VISIBLE */
+
+
+/* Popup Overlay */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+  z-index: 9999;
+}
+
+
+/* ✅ On Card Hover → Button Pop Effect */
+.solution-card:hover  {
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(255, 100, 0, 0.6);
+}
+
+/* Popup Box */
+.popup-box {
+  background: #111;
+  color: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 420px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(255, 128, 0, 0.5);
+  transform: scale(0.8);
+  transition: 0.3s ease;
+  border: 2px solid #ff7b00;
+}
+.buyy-btn {
+  color: orange;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 12px;
+  background-color: white;
+  text-transform: capitalize;
+  border-radius: 10px;
+}
+
+/* Show Popup */
+.popup-overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup-overlay.active .popup-box {
+  transform: scale(1);
+}
+
+/* Popup Buttons */
+.open-popup-btn, .close-popup-btn {
+  background: linear-gradient(90deg, #ff8c00, #ff5e00);
+  border: none;
+  padding: 12px 35px;
+  border-radius: 30px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.open-popup-btn:hover, .close-popup-btn:hover {
+  box-shadow: 0 0 18px #ff7b00;
+  transform: scale(1.05);
+}
+
+/* Mobile Responsive */
+@media (max-width: 450px) {
+  .popup-box {
+    width: 92%;
+    padding: 22px;
+  }
+}
